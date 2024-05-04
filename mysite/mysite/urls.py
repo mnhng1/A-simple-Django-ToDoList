@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from register import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("main.urls")), #link our project to direct the path (default) to main.urls page defined in main app
-    
+    path('register/', v.register, name ="register")
 ]
  
